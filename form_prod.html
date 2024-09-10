@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Productos</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+          <nav>
+            <a href="index.html"><h1>Inicio</h1></a>
+            <a href="form_prod.html"><h1>Formulario de Productos</h1></a>
+          </nav>
+    </header>
+    <main>
+        <form id="product-form" onsubmit="event.preventDefault(); guardarOmodificarDatos(getProductId());">
+            <label for="nombres-n">Nombre:</label>
+            <input type="text" id="nombres-n" required>
+            
+            <label for="precio-p">Precio:</label>
+            <input type="number" id="precio-p" required>
+            
+            <label for="categoria-c">Categoría:</label>
+            <input type="text" id="categoria-c" required>
+
+            <button type="submit">Guardar</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mi Empresa</p>
+    </footer>
+    <script src="js/productos.js"></script>
+    <script src="js/request.js"></script>
+    <script>
+        function getProductId() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const id = getProductId();
+            if (id) {
+                cargarDatos(id);
+            }
+        });
+    </script>
+</body>
+</html>
