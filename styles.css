@@ -18,6 +18,7 @@ header {
     color: #ecf0f1; 
     padding: 1rem;
     text-align: center;
+
 }
 
 
@@ -25,6 +26,7 @@ nav {
     display: flex;
     justify-content: space-around;
     gap: 2rem; 
+    
 }
 
 nav a {
@@ -114,17 +116,20 @@ table {
     margin: 1rem auto; 
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
 }
 
 th, td {
     padding: 1rem;
     text-align: center;
     border-bottom: 1px solid #ddd;
+
 }
 
 th {
     background-color: #3498db; 
     color: #fff; 
+    
 }
 
 td {
@@ -137,7 +142,7 @@ footer {
     color: #ecf0f1; 
     padding: 1rem;
     text-align: center;
-    position: fixed;
+
     bottom: 0;
     width: 100%;
 }
